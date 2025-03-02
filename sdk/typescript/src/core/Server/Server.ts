@@ -4,12 +4,10 @@ import { LocalAgent } from '../../agents/LocalAgent';
 class Server {
   private app: express.Application;
   private port: number;
-  private agents: LocalAgent[];
 
   constructor(port: number) {
     this.app = express();
     this.port = port;
-    this.agents = [];
     this.app.use(express.json());
   }
 

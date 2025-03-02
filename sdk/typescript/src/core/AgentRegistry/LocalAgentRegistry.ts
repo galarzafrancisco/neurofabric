@@ -12,7 +12,6 @@ class LocalAgentRegistry implements IAgentRegistry {
 
     async find(name: string, version: string): Promise<AgentRegistryEntry | null> {
         const key = `${name}:${version}`;
-        console.log(`searching with key ${key}`)
         return this.agents.get(key) || null;
     }
 
